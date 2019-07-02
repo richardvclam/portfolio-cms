@@ -5,13 +5,15 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "host": "127.0.0.1",
-        "port": 27017,
-        "database": "portfolio-cms",
-        "username": "",
-        "password": ""
+        "host": "cluster0-shard-00-00-ht6lx.mongodb.net:27017,cluster0-shard-00-01-ht6lx.mongodb.net:27017,cluster0-shard-00-02-ht6lx.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
+        "port": "",
+        "database": "portfolio",
+        "username": "heroku",
+        "password": "Q9lj99mTUxEmhin5"
       },
-      "options": {}
+      "options": {
+        "ssl": true
+      }
     }
   }
 }
