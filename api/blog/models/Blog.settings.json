@@ -13,13 +13,13 @@
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "required": true,
+      "type": "string"
     },
     "slug": {
-      "type": "string",
       "unique": true,
-      "required": true
+      "required": true,
+      "type": "string"
     },
     "content": {
       "type": "text"
