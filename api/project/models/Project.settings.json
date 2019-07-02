@@ -26,6 +26,11 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     }
   }
 }
