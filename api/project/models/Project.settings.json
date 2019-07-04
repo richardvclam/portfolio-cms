@@ -31,6 +31,9 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "isFeatured": {
+      "type": "boolean"
     }
   }
 }
