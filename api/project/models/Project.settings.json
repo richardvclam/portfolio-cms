@@ -44,6 +44,12 @@
       "collection": "tag",
       "via": "projects",
       "dominant": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
     }
   }
 }
