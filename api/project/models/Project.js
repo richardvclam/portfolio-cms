@@ -40,8 +40,8 @@ module.exports = {
   afterCreate: async (model, result) => {
     axios
       .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, model)
-      .catch(() => {
-        // Ignore
+      .catch(err => {
+        console.error(err);
       });
   },
 
@@ -55,8 +55,8 @@ module.exports = {
   afterUpdate: async (model, result) => {
     axios
       .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, model)
-      .catch(() => {
-        // Ignore
+      .catch(err => {
+        console.error(err);
       });
   },
 
@@ -70,8 +70,8 @@ module.exports = {
   afterDestroy: async (model, result) => {
     axios
       .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, model)
-      .catch(() => {
-        // Ignore
+      .catch(err => {
+        console.error(err);
       });
   }
 };
