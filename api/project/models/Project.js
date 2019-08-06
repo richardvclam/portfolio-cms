@@ -37,9 +37,9 @@ module.exports = {
   // After creating a value.
   // Fired after an `insert` query.
   // afterCreate: async (model, result) => {},
-  afterCreate: async (model, result) => {
+  afterCreate: async entry => {
     axios
-      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, model)
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, entry)
       .catch(err => {
         console.error(err);
       });
@@ -52,9 +52,9 @@ module.exports = {
   // After updating a value.
   // Fired after an `update` query.
   // afterUpdate: async (model, result) => {},
-  afterUpdate: async (model, result) => {
+  afterUpdate: async entry => {
     axios
-      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, model)
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, entry)
       .catch(err => {
         console.error(err);
       });
@@ -67,9 +67,9 @@ module.exports = {
   // After destroying a value.
   // Fired after a `delete` query.
   // afterDestroy: async (model, result) => {}
-  afterDestroy: async (model, result) => {
+  afterDestroy: async entry => {
     axios
-      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, model)
+      .post(strapi.config.currentEnvironment.staticWebsiteBuildURL, entry)
       .catch(err => {
         console.error(err);
       });
